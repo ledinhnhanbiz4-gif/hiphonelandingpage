@@ -1,0 +1,6 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Additional React-specific styles if needed */
