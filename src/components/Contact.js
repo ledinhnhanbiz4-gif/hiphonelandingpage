@@ -13,14 +13,14 @@ function Contact() {
     },
     {
       name: 'TikTok',
-      description: 'Review sản phẩm & tips hay',
+      description: 'Xem review & mẹo hay',
       icon: 'fa-tiktok',
       url: 'https://www.tiktok.com/@huyle9979?_r=1&_t=ZS-913ZGHh1Kqb',
       className: 'tiktok'
     },
     {
       name: 'Zalo',
-      description: 'Chat trực tiếp qua Zalo',
+      description: 'Chat ngay qua Zalo',
       icon: 'fa-comment-dots',
       url: '#',
       className: 'zalo',
