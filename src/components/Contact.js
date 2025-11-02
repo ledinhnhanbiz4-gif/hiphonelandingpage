@@ -29,7 +29,7 @@ function Contact() {
     {
       name: 'Hotline',
       description: '0396678112',
-      icon: 'fa-phone-alt',
+      icon: 'fa-phone',
       url: 'tel:0396678112',
       className: 'phone'
     }
@@ -76,24 +76,28 @@ function Contact() {
             <div className="card-decoration"></div>
           </div>
 
-          {/* Social Links */}
-          <div className="social-links-container">
+          {/* Right Column */}
+          <div className="contact-right">
+            {/* Social Links */}
+            <div className="social-links-container">
             {socialLinks.map((link, index) => (
               link.isZalo ? (
-                <button
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                <a
                   key={index}
+                  href="#"
                   onClick={handleZaloClick}
                   className={`social-card ${link.className} animate-on-scroll`}
                 >
-                  <div className="social-icon">
-                    <i className={`fas ${link.icon}`}></i>
+                  <div className="social-icon zalo-icon-img">
+                    <img src="/iconzalo.jpg" alt="Zalo" />
                   </div>
                   <div className="social-info">
                     <h4>{link.name}</h4>
                     <p>{link.description}</p>
                   </div>
                   <i className="fas fa-arrow-right"></i>
-                </button>
+                </a>
               ) : (
                 <a
                   key={index}
@@ -103,7 +107,7 @@ function Contact() {
                   className={`social-card ${link.className} animate-on-scroll`}
                 >
                   <div className="social-icon">
-                    <i className={`fab ${link.icon}`}></i>
+                    <i className={`${link.className === 'phone' || link.className === 'map' ? 'fas' : 'fab'} ${link.icon}`}></i>
                   </div>
                   <div className="social-info">
                     <h4>{link.name}</h4>
@@ -113,6 +117,21 @@ function Contact() {
                 </a>
               )
             ))}
+            </div>
+
+            {/* Google Maps */}
+            <div className="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30999.90013350069!2d109.17640537171918!3d13.779625993354145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f6d003e344825%3A0x8d950cc6ed5cb1f9!2sHi%20Phone!5e0!3m2!1sen!2s!4v1762097646957!5m2!1sen!2s"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="HiPhone Store Location"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
